@@ -3,31 +3,223 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 2, 6, 23;
+  --text-primary: 255, 255, 255;
+  --text-secondary: 148, 163, 184;
+  --neon-blue: 62, 161, 255;
+  --neon-purple: 168, 85, 247;
+  --darker-bg: 4, 12, 45;
+  --card-rgb: 17, 25, 40;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Custom Cursor */
+* {
+  cursor: none;
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(var(--neon-blue));
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+}
+
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  border-color: rgb(var(--neon-blue));
+  background-color: rgba(var(--neon-blue), 0.1);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+  color: rgb(var(--text-primary));
+  font-family: 'Inter', sans-serif;
+}
+
+/* Neon Text Effect */
+.neon-text {
+  color: rgb(var(--neon-blue));
+  text-shadow: 0 0 10px rgba(var(--neon-blue), 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+.neon-text:hover {
+  text-shadow: 0 0 20px rgba(var(--neon-blue), 0.8);
+}
+
+.neon-purple {
+  color: rgb(var(--neon-purple));
+  text-shadow: 0 0 10px rgba(var(--neon-purple), 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+.neon-purple:hover {
+  text-shadow: 0 0 20px rgba(var(--neon-purple), 0.8);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, rgb(var(--neon-blue)), rgb(var(--neon-purple)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover Effects */
+*[data-hover="true"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.hover-glow:hover {
+  filter: drop-shadow(0 0 0.75rem rgba(var(--neon-blue), 0.5));
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(var(--neon-blue), 0.2); }
+  50% { box-shadow: 0 0 20px rgba(var(--neon-blue), 0.4); }
+  100% { box-shadow: 0 0 5px rgba(var(--neon-blue), 0.2); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+.pulse-animation {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.glow-animation {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--darker-bg));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--neon-blue), 0.3);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--neon-purple), 0.5);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Card hover transitions */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 40px -10px rgba(var(--neon-blue), 0.3);
+}
+
+/* Card Glow Effects */
+.card-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--neon-blue), 0.1),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.card-glow:hover::before {
+  left: 100%;
+}
+
+/* Glowing Header Animation */
+@keyframes glow-pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(var(--neon-blue), 0.5),
+                 0 0 20px rgba(var(--neon-blue), 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(var(--neon-blue), 0.8),
+                 0 0 30px rgba(var(--neon-blue), 0.5),
+                 0 0 40px rgba(var(--neon-blue), 0.3);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(var(--neon-blue), 0.5),
+                 0 0 20px rgba(var(--neon-blue), 0.3);
+  }
+}
+
+@keyframes glow-pulse-purple {
+  0% {
+    text-shadow: 0 0 10px rgba(var(--neon-purple), 0.5),
+                 0 0 20px rgba(var(--neon-purple), 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(var(--neon-purple), 0.8),
+                 0 0 30px rgba(var(--neon-purple), 0.5),
+                 0 0 40px rgba(var(--neon-purple), 0.3);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(var(--neon-purple), 0.5),
+                 0 0 20px rgba(var(--neon-purple), 0.3);
+  }
+}
+
+.glowing-header {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.glowing-header-purple {
+  animation: glow-pulse-purple 3s ease-in-out infinite;
 }
