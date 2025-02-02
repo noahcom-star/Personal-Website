@@ -105,9 +105,14 @@ export default function Hero() {
           </motion.h1>
         </div>
         
-        <p className="text-lg md:text-xl text-[rgb(var(--text-secondary))] mb-8">
-          I&apos;m a high school student who&apos;s passionate about building the future. Let&apos;s connect and create something amazing together!
-        </p>
+        <motion.p
+          className="text-lg md:text-xl text-[rgb(var(--text-secondary))] max-w-3xl mx-auto mb-12 relative"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          Figure it out enthusiast & obsessed with learning. I take action, jump at every opportunity, and love challenges. If I&apos;m not qualified? I don&apos;t care—I&apos;ll figure it out!
+        </motion.p>
 
         {/* Social links with enhanced hover effects */}
         <div className="mt-12 flex justify-center gap-6">
