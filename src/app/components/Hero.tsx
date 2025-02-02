@@ -69,7 +69,7 @@ export default function Hero() {
       
       {/* Main content */}
       <motion.div 
-        className="max-w-4xl mx-auto text-center relative z-10"
+        className="max-w-4xl w-full mx-auto text-center relative z-10"
         animate={{ y: [0, -10, 0] }}
         transition={{
           duration: 6,
@@ -158,7 +158,7 @@ export default function Hero() {
 
       {/* Enhanced scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 5, 0] }}
         transition={{
