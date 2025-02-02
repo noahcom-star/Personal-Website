@@ -91,14 +91,45 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
-      <motion.h2 
-        className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text"
+      <motion.div 
+        className="text-center mb-12 relative"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        Hot Takes 🔥
-      </motion.h2>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.15),transparent_70%)] blur-xl" />
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold gradient-text relative"
+          animate={{ 
+            textShadow: [
+              "0 0 20px rgba(var(--neon-purple), 0.5)",
+              "0 0 40px rgba(var(--neon-purple), 0.8)",
+              "0 0 20px rgba(var(--neon-purple), 0.5)"
+            ]
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          Hot Takes{" "}
+          <motion.span
+            animate={{ 
+              scale: [1, 1.2, 1],
+              rotate: [0, 15, -15, 0]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="inline-block"
+          >
+            🔥
+          </motion.span>
+        </motion.h2>
+      </motion.div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {hotTakes.slice(0, -1).map((hotTake, index) => (

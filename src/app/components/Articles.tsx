@@ -12,22 +12,22 @@ interface Article {
 
 const articles: Article[] = [
   {
-    title: "OpenAI's Strawberry",
+    title: "OpenAI's Strawberry Model",
     description: "An analysis of OpenAI's latest developments and their impact on the AI landscape.",
     date: "October 2023",
-    link: "#",
+    link: "https://medium.com/@noahsaur/openais-strawberry-is-here-and-this-one-s-a-thinker-a5f23b585305",
   },
   {
     title: "Can AI Predict the Markets next move",
     description: "Exploring the intersection of artificial intelligence and market prediction.",
     date: "November 2024",
-    link: "#",
+    link: "https://medium.com/@noahsaur/can-ai-predict-the-markets-next-move-39b4e952fe8f",
   },
   {
-    title: "Twitter",
+    title: "Twitter's Sentiment Analysis",
     description: "Insights into Twitter's evolution and its impact on digital communication.",
     date: "December 2024",
-    link: "#",
+    link: "https://medium.com/@noahsaur/what-if-you-could-uncover-the-emotions-behind-every-tweet-b9e8bce28875",
   },
 ];
 
