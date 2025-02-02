@@ -158,7 +158,7 @@ export default function Hero() {
 
       {/* Enhanced scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 5, 0] }}
         transition={{
