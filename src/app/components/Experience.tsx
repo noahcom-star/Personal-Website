@@ -20,7 +20,7 @@ const currentExperiences: ExperienceItem[] = [
   {
     title: "SEO Intern",
     organization: "Armilla AI (YC-backed)",
-    description: "Working with the world&apos;s first AI insurance startup, Armilla AI, a Y Combinator-backed company that has raised over $5 million. Focusing on SEO optimization and content strategy.",
+    description: "Working with the world's first AI insurance startup, Armilla AI, a Y Combinator-backed company that has raised over $5 million. Focusing on SEO optimization and content strategy.",
     date: "December 2024 - Present",
     link: "https://armilla.ai",
     tags: ["SEO", "AI", "Insurance Tech", "YC"]
@@ -43,7 +43,7 @@ const currentExperiences: ExperienceItem[] = [
   {
     title: "TKS Velocity Program",
     organization: "Top 7% of Students",
-    description: "Selected for the world&apos;s top global accelerator for teens (10-15% acceptance rate from 42,000+ applicants). Part of Velocity, representing the top ~7% of TKS students. Focused on emerging tech, solving global problems through hands-on projects, and developing exponential growth mindset.",
+    description: "Selected for the world's top global accelerator for teens (10-15% acceptance rate from 42,000+ applicants). Part of Velocity, representing the top ~7% of TKS students. Focused on emerging tech, solving global problems through hands-on projects, and developing exponential growth mindset.",
     achievements: [
       "Mastering unstructured problem solving through first-principle thinking",
       "Receiving advanced training with higher standards",
@@ -75,9 +75,9 @@ const pastExperiences: ExperienceItem[] = [
     organization: "AI Project",
     description: "AI-powered shopping assistant focused on sustainability and ethics in fashion.",
     achievements: [
-      "One of the first GPTs available on OpenAI&apos;s GPT Store",
-      "Matches clothing to users&apos; style while considering ethical values",
-      "Provides insights on brands&apos; ethical practices and environmental impact",
+      "One of the first GPTs available on OpenAI's GPT Store",
+      "Matches clothing to users' style while considering ethical values",
+      "Provides insights on brands' ethical practices and environmental impact",
       "Promotes transparency and responsible purchasing in fashion"
     ],
     date: "November 2023",
@@ -121,7 +121,7 @@ const pastExperiences: ExperienceItem[] = [
       "Developed comprehensive Gen Z marketing strategy",
       "Created interactive prototype for new IKEA experience",
       "Selected from 4000+ innovative TKS students globally",
-      "Presented innovative solutions to IKEA&apos;s executive team"
+      "Presented innovative solutions to IKEA's executive team"
     ],
     date: "December 2024",
     links: {
@@ -133,7 +133,7 @@ const pastExperiences: ExperienceItem[] = [
   {
     title: "SHAD Western Design Project",
     organization: "Winner 🏆",
-    description: "Led a team of 5 to victory in Canada&apos;s top high school innovation program, competing against 100+ students.",
+    description: "Led a team of 5 to victory in Canada's top high school innovation program, competing against 100+ students.",
     achievements: [
       "Placed first among 100+ competing students",
       "Led team of 5 to develop innovative sustainability solution",
@@ -146,7 +146,7 @@ const pastExperiences: ExperienceItem[] = [
   {
     title: "MovItiative",
     organization: "Charity Founder",
-    description: "Founded and led a successful charity initiative because the people I loved were battling cancer and I couldn&apos;t handle not doing anything.",
+    description: "Founded and led a successful charity initiative because the people I loved were battling cancer and I couldn't handle not doing anything.",
     achievements: [
       "Raised over $1000+ in final year for cancer research",
       "Organized school-wide Movember Mondays & sports tournaments",
