@@ -15,7 +15,7 @@ const hotTakes: HotTake[] = [
   },
   {
     title: "On AI & Jobs",
-    description: "AI won&apos;t take your job—someone using AI better than you will."
+    description: "AI won't take your job—someone using AI better than you will."
   },
   {
     title: "On Risk",
