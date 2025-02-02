@@ -90,34 +90,25 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 
 export default function HotTakes() {
   return (
-    <Section id="hottakes" className="relative">
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold mb-4 neon-purple text-center glowing-header-purple"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-          Hot Takes 🔥
-        </motion.h2>
-        
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="text-[rgb(var(--text-secondary))] text-center mb-16 text-lg"
-        >
-          These are my opinions as of January 2025 with very little experience so take it as a grain of salt. Chances are these will change every month haha.
-        </motion.p>
-        
-        <div className="grid gap-8 md:grid-cols-2">
-          {hotTakes.map((hotTake, index) => (
-            <HotTakeCard key={hotTake.title} hotTake={hotTake} index={index} />
-          ))}
-        </div>
+    <Section id="hot-takes" className="py-20">
+      <motion.h2 
+        className="text-4xl md:text-5xl font-bold mb-12 text-center gradient-text"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        Hot Takes 🔥
+      </motion.h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        {hotTakes.slice(0, -1).map((hotTake, index) => (
+          <HotTakeCard key={hotTake.title} hotTake={hotTake} index={index} />
+        ))}
+      </div>
+      
+      {/* Centered last card */}
+      <div className="mt-6 max-w-3xl mx-auto">
+        <HotTakeCard hotTake={hotTakes[hotTakes.length - 1]} index={hotTakes.length - 1} />
       </div>
     </Section>
   );
