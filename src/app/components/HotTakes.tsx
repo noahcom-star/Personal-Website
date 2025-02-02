@@ -51,7 +51,7 @@ const hotTakes: HotTake[] = [
   },
   {
     title: "Decision Making",
-    description: "The best entrepreneurs aren't the ones who know everything—they're the ones comfortable with knowing nothing and making decisions without knowing what's behind the door."
+    description: "The best entrepreneurs aren't the ones who know everything, because that means they waited too long—they're the ones comfortable with making critical decisions without knowing what's behind the door."
   }
 ];
 
