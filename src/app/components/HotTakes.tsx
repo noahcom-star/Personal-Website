@@ -63,15 +63,33 @@ const HotTakeCard: React.FC<HotTakeCardProps> = ({ hotTake, index }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: index * 0.05 }}
-      className="relative p-6 rounded-lg border border-[rgba(var(--neon-purple),0.3)] bg-[rgba(var(--darker-bg),0.5)]"
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ 
+        scale: 1.02,
+        borderColor: 'rgba(var(--neon-purple), 0.8)',
+        backgroundColor: 'rgba(var(--darker-bg), 0.7)'
+      }}
+      className="relative p-6 rounded-lg border border-[rgba(var(--neon-purple),0.3)] bg-[rgba(var(--darker-bg),0.5)] transition-colors duration-300 group hover:shadow-lg hover:shadow-[rgba(var(--neon-purple),0.1)]"
     >
-      <h3 className="text-xl font-bold mb-4 text-[rgb(var(--neon-purple))]">
+      <motion.div
+        className="absolute inset-0 bg-[rgba(var(--neon-purple),0.03)] opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300"
+      />
+      
+      <motion.h3 
+        className="text-xl font-bold mb-4 text-[rgb(var(--neon-purple))] relative"
+        whileHover={{ scale: 1.01 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
         {hotTake.title}
-      </h3>
-      <p className="text-[rgb(var(--text-secondary))]">
+      </motion.h3>
+      
+      <motion.p 
+        className="text-[rgb(var(--text-secondary))] group-hover:text-[rgb(var(--text-primary))] transition-colors duration-300 relative"
+        initial={{ opacity: 0.9 }}
+        whileInView={{ opacity: 1 }}
+      >
         {hotTake.description}
-      </p>
+      </motion.p>
     </motion.div>
   );
 };
@@ -86,7 +104,7 @@ const HotTakes: React.FC = () => {
         
         <div className="max-w-2xl mx-auto bg-[rgba(var(--darker-bg),0.7)] border border-[rgba(var(--neon-purple),0.2)] rounded-lg p-4">
           <p className="text-[rgb(var(--text-primary))] text-lg italic">
-            These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they&apos;ll probably change every month! 😅
+            These are my current takes on entrepreneurship as of January 2025 with little experience, take them with a grain of salt—they&apos;ll probably change every month haha.
           </p>
         </div>
       </div>
