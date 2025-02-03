@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Section from './Section';
+import React from 'react';
 
 interface HotTake {
   title: string;
@@ -75,7 +76,12 @@ const hotTakes: HotTake[] = [
   }
 ];
 
-function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
+interface HotTakeCardProps {
+  hotTake: HotTake;
+  index: number;
+}
+
+const HotTakeCard: React.FC<HotTakeCardProps> = ({ hotTake, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -92,9 +98,9 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
       </p>
     </motion.div>
   );
-}
+};
 
-export default function HotTakes() {
+const HotTakes: React.FC = () => {
   return (
     <Section id="hot-takes" className="py-20">
       <div className="text-center mb-20">
@@ -116,4 +122,6 @@ export default function HotTakes() {
       </div>
     </Section>
   );
-} 
+};
+
+export default HotTakes; 
