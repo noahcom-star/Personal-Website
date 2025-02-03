@@ -149,13 +149,9 @@ export default function HotTakes() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-        {hotTakes.slice(0, -1).map((hotTake, index) => (
+        {hotTakes.map((hotTake, index) => (
           <HotTakeCard key={hotTake.title} hotTake={hotTake} index={index} />
         ))}
-      </div>
-      
-      <div className="mt-6 max-w-3xl mx-auto">
-        <HotTakeCard hotTake={hotTakes[hotTakes.length - 1]} index={hotTakes.length - 1} />
       </div>
     </Section>
   );
