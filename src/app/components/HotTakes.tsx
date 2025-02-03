@@ -12,15 +12,15 @@ interface HotTake {
 const hotTakes: HotTake[] = [
   {
     title: "Startups Need Less Planning, More Building",
-    description: "Too many founders get stuck in analysis paralysis. The best way to learn is by shipping something real to users, even if it's not perfect."
+    description: "Too many founders get stuck in analysis paralysis. The best way to learn is by shipping something real to users, even if it&apos;s not perfect."
   },
   {
     title: "On AI & Jobs",
-    description: "AI won't take your job—someone using AI better than you will."
+    description: "AI won&apos;t take your job—someone using AI better than you will."
   },
   {
     title: "On Risk",
-    description: "Everyones perception of risk is flawed."
+    description: "Everyone&apos;s perception of risk is flawed."
   },
   {
     title: "On Self-Made Success",
@@ -28,27 +28,27 @@ const hotTakes: HotTake[] = [
   },
   {
     title: "On Growth",
-    description: "If you're not slightly embarrassed by what you built a year ago, you're not growing fast enough."
+    description: "If you&apos;re not slightly embarrassed by what you built a year ago, you&apos;re not growing fast enough."
   },
   {
     title: "On Success",
-    description: "Most people want a 'blueprint for success,' but real success is just figuring things out as you go."
+    description: "Most people want a &apos;blueprint for success,&apos; but real success is just figuring things out as you go."
   },
   {
     title: "On VC Funding",
-    description: "Raising VC money isn't an achievement—it's a liability. The real flex is revenue."
+    description: "Raising VC money isn&apos;t an achievement—it&apos;s a liability. The real flex is revenue."
   },
   {
     title: "On Work-Life Balance",
-    description: "'Work-life balance' is a lie—either you're obsessed, or you haven't found your passion yet."
+    description: "&apos;Work-life balance&apos; is a lie—either you&apos;re obsessed, or you haven&apos;t found your passion yet."
   },
   {
     title: "On Entrepreneurship",
-    description: "Nobody knows what they're doing in entrepreneurship, it's all uncharted and what separates successful founders vs unsuccessful is their willingness to work in the unknown."
+    description: "Nobody knows what they&apos;re doing in entrepreneurship, it&apos;s all uncharted and what separates successful founders vs unsuccessful is their willingness to work in the unknown."
   },
   {
     title: "On Uncertainty",
-    description: "If you want to become a successful entrepreneur, you need to become comfortable with handling uncertainty, and making decisions without knowing what's behind the door."
+    description: "If you want to become a successful entrepreneur, you need to become comfortable with handling uncertainty, and making decisions without knowing what&apos;s behind the door."
   }
 ];
 
