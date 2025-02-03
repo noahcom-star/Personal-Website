@@ -18,24 +18,23 @@
 }
 
 .custom-cursor {
-  width: 12px;
-  height: 12px;
-  background: rgba(var(--neon-purple), 0.3);
-  border: 1px solid rgb(var(--neon-purple));
+  width: 8px;
+  height: 8px;
+  background: rgb(var(--neon-purple));
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.1s, height 0.1s, background-color 0.1s;
-  will-change: transform;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  mix-blend-mode: screen;
 }
 
 .custom-cursor.hover {
-  width: 24px;
-  height: 24px;
-  background: rgba(var(--neon-purple), 0.1);
-  border: 1px solid rgb(var(--neon-purple));
+  width: 20px;
+  height: 20px;
+  background: rgba(var(--neon-purple), 0.5);
 }
 
 /* Smooth Scroll */

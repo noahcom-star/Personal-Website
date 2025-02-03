@@ -1,31 +1,24 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
   useEffect(() => {
     const cursor = document.createElement('div');
     cursor.className = 'custom-cursor';
     document.body.appendChild(cursor);
 
     const onMouseMove = (e: MouseEvent) => {
-      requestAnimationFrame(() => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-      });
+      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     };
 
     const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const isHoverable = !!target.closest('[data-hover="true"]');
-      cursor.classList.toggle('hover', isHoverable);
+      cursor.classList.toggle('hover', !!target.closest('[data-hover="true"]'));
     };
 
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseover', onMouseOver);
+    document.addEventListener('mousemove', onMouseMove, { passive: true });
+    document.addEventListener('mouseover', onMouseOver, { passive: true });
 
     return () => {
       document.removeEventListener('mousemove', onMouseMove);
@@ -34,6 +27,5 @@ export default function CustomCursor() {
     };
   }, []);
 
-  // Return null since we're managing the cursor directly in the DOM
   return null;
 } 
