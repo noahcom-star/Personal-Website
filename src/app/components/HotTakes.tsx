@@ -110,7 +110,7 @@ const HotTakes: React.FC = () => {
         
         <div className="max-w-2xl mx-auto bg-[rgba(var(--darker-bg),0.7)] border border-[rgba(var(--neon-purple),0.2)] rounded-lg p-4">
           <p className="text-[rgb(var(--text-primary))] text-lg italic">
-            These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they'll probably change every month! 😅
+            These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they&apos;ll probably change every month! 😅
           </p>
         </div>
       </div>
