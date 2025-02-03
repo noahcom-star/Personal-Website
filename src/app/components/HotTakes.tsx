@@ -120,9 +120,9 @@ export default function HotTakes() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-[rgb(var(--text-secondary))] text-lg max-w-2xl mx-auto"
+          className="text-[rgb(var(--text-secondary))] text-lg max-w-2xl mx-auto italic"
         >
-          Just my current takes on entrepreneurship as of 2025. With my limited experience, take these with a grain of salt—they'll probably evolve as I learn more!
+          These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they'll probably change every month! 😅
         </motion.p>
       </div>
       
