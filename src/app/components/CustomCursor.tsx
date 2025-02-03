@@ -9,7 +9,7 @@ export default function CustomCursor() {
     document.body.appendChild(cursor);
 
     const onMouseMove = (e: MouseEvent) => {
-      cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
+      cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
     };
 
     const onMouseOver = (e: MouseEvent) => {
@@ -17,9 +17,9 @@ export default function CustomCursor() {
       const isHoverable = !!target.closest('[data-hover="true"]');
       cursor.classList.toggle('hover', isHoverable);
       if (isHoverable) {
-        cursor.style.transform = `translate(${e.clientX - 16}px, ${e.clientY - 16}px)`;
+        cursor.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
       } else {
-        cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
+        cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
       }
     };
 
