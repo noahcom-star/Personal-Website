@@ -50,22 +50,22 @@ body {
 /* Neon Text Effect */
 .neon-text {
   color: rgb(var(--neon-blue));
-  text-shadow: 0 0 10px rgba(var(--neon-blue), 0.5);
+  text-shadow: 0 0 8px rgba(var(--neon-blue), 0.5);
   transition: text-shadow 0.3s ease;
 }
 
 .neon-text:hover {
-  text-shadow: 0 0 20px rgba(var(--neon-blue), 0.8);
+  text-shadow: 0 0 12px rgba(var(--neon-blue), 0.8);
 }
 
 .neon-purple {
   color: rgb(var(--neon-purple));
-  text-shadow: 0 0 10px rgba(var(--neon-purple), 0.5);
+  text-shadow: 0 0 8px rgba(var(--neon-purple), 0.5);
   transition: text-shadow 0.3s ease;
 }
 
 .neon-purple:hover {
-  text-shadow: 0 0 20px rgba(var(--neon-purple), 0.8);
+  text-shadow: 0 0 12px rgba(var(--neon-purple), 0.8);
 }
 
 /* Gradient Text */
@@ -148,13 +148,13 @@ body {
 
 /* Card hover transitions */
 .card-hover {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
 }
 
 .card-hover:hover {
   transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 10px 40px -10px rgba(var(--neon-blue), 0.3);
+  box-shadow: 0 0 15px -5px rgba(var(--neon-purple), 0.3);
 }
 
 /* Card Glow Effects */
@@ -202,17 +202,16 @@ body {
 
 @keyframes glow-pulse-purple {
   0% {
-    text-shadow: 0 0 10px rgba(var(--neon-purple), 0.5),
-                 0 0 20px rgba(var(--neon-purple), 0.3);
+    text-shadow: 0 0 8px rgba(var(--neon-purple), 0.5),
+                 0 0 12px rgba(var(--neon-purple), 0.3);
   }
   50% {
-    text-shadow: 0 0 20px rgba(var(--neon-purple), 0.8),
-                 0 0 30px rgba(var(--neon-purple), 0.5),
-                 0 0 40px rgba(var(--neon-purple), 0.3);
+    text-shadow: 0 0 12px rgba(var(--neon-purple), 0.8),
+                 0 0 16px rgba(var(--neon-purple), 0.5);
   }
   100% {
-    text-shadow: 0 0 10px rgba(var(--neon-purple), 0.5),
-                 0 0 20px rgba(var(--neon-purple), 0.3);
+    text-shadow: 0 0 8px rgba(var(--neon-purple), 0.5),
+                 0 0 12px rgba(var(--neon-purple), 0.3);
   }
 }
 
