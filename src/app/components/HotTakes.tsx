@@ -61,25 +61,25 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative p-6 rounded-lg border border-[rgba(var(--neon-purple),0.3)] bg-[rgba(var(--darker-bg),0.5)] backdrop-blur-none hover:border-[rgba(var(--neon-purple),0.8)] card-hover group"
-      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
+      className="relative p-6 rounded-lg border border-[rgba(var(--neon-purple),0.3)] bg-[rgba(var(--darker-bg),0.5)] hover:border-[rgba(var(--neon-purple),0.8)] card-hover group"
+      whileHover={{ scale: 1.01 }}
     >
       <div className="absolute inset-0 bg-[rgba(var(--neon-purple),0.02)] opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg" />
       
       <div className="relative z-10">
         <motion.h3 
           className="text-xl font-bold mb-4 text-[rgb(var(--neon-purple))]"
-          whileHover={{ scale: 1.02 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          whileHover={{ scale: 1.01 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
         >
           {hotTake.title}
         </motion.h3>
         <motion.p 
-          className="text-[rgb(var(--text-secondary))] group-hover:text-[rgb(var(--text-primary))] transition-colors duration-300"
+          className="text-[rgb(var(--text-secondary))] group-hover:text-[rgb(var(--text-primary))] transition-colors duration-150"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.1 }}
           viewport={{ once: true }}
         >
           {hotTake.description}
@@ -92,31 +92,27 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
-      <motion.div className="relative mb-12">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.1),transparent_50%)] blur-sm" />
-        
-        <motion.h2 
-          className="text-4xl md:text-5xl font-bold text-center gradient-text relative"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Hot Takes <motion.span
-            animate={{
-              textShadow: [
-                "0 0 8px rgba(var(--neon-purple), 0.6)",
-                "0 0 12px rgba(var(--neon-purple), 0.8)",
-                "0 0 8px rgba(var(--neon-purple), 0.6)"
-              ]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >🔥</motion.span>
-        </motion.h2>
-      </motion.div>
+      <motion.h2 
+        className="text-4xl md:text-5xl font-bold text-center gradient-text relative mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        Hot Takes <motion.span
+          animate={{
+            textShadow: [
+              "0 0 4px rgba(var(--neon-purple), 0.6)",
+              "0 0 8px rgba(var(--neon-purple), 0.8)",
+              "0 0 4px rgba(var(--neon-purple), 0.6)"
+            ]
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >🔥</motion.span>
+      </motion.h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {hotTakes.slice(0, -1).map((hotTake, index) => (
