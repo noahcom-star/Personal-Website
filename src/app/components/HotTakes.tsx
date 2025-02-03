@@ -63,19 +63,21 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative p-6 rounded-lg border border-[rgba(var(--neon-purple),0.2)] bg-[rgba(var(--darker-bg),0.5)] backdrop-blur-sm hover:border-[rgba(var(--neon-purple),0.5)] card-hover card-glow group"
+      whileHover={{ scale: 1.02 }}
     >
       <div className="absolute inset-0 bg-[rgba(var(--neon-purple),0.03)] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out rounded-lg" />
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-[rgba(var(--neon-purple),0.2)] to-[rgba(var(--neon-blue),0.2)] opacity-0 group-hover:opacity-100 blur-md transition-all duration-500 rounded-lg" />
       
       <div className="relative z-10">
         <motion.h3 
-          className="text-xl font-bold mb-4 text-[rgb(var(--neon-purple))]"
+          className="text-xl font-bold mb-4 text-[rgb(var(--neon-purple))] group-hover:text-shadow-glow"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           {hotTake.title}
         </motion.h3>
         <motion.p 
-          className="text-[rgb(var(--text-secondary))]"
+          className="text-[rgb(var(--text-secondary))] group-hover:text-[rgb(var(--text-primary))] transition-colors duration-300"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -91,32 +93,21 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
-      <div className="text-center mb-12 relative">
-        <motion.div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.2),transparent_70%)] blur-xl"
-          animate={{
-            opacity: [0.5, 0.8, 0.5]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+      <motion.div className="relative mb-12">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.15),transparent_70%)] blur-2xl" />
         
         <motion.h2 
-          className="text-4xl md:text-6xl font-bold relative"
+          className="text-4xl md:text-5xl font-bold text-center gradient-text relative glowing-header-purple"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <motion.span
-            className="text-[rgb(var(--neon-purple))]"
+          Hot Takes <motion.span
             animate={{
               textShadow: [
-                "0 0 10px rgba(var(--neon-purple), 0.5), 0 0 20px rgba(var(--neon-purple), 0.3)",
-                "0 0 15px rgba(var(--neon-purple), 0.7), 0 0 30px rgba(var(--neon-purple), 0.5)",
-                "0 0 10px rgba(var(--neon-purple), 0.5), 0 0 20px rgba(var(--neon-purple), 0.3)"
+                "0 0 20px rgba(255,100,50,0.5)",
+                "0 0 30px rgba(255,100,50,0.8)",
+                "0 0 20px rgba(255,100,50,0.5)"
               ]
             }}
             transition={{
@@ -124,42 +115,9 @@ export default function HotTakes() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          >
-            Hot
-          </motion.span>{" "}
-          <motion.span
-            className="text-[rgb(var(--neon-blue))]"
-            animate={{
-              textShadow: [
-                "0 0 10px rgba(var(--neon-blue), 0.5), 0 0 20px rgba(var(--neon-blue), 0.3)",
-                "0 0 15px rgba(var(--neon-blue), 0.7), 0 0 30px rgba(var(--neon-blue), 0.5)",
-                "0 0 10px rgba(var(--neon-blue), 0.5), 0 0 20px rgba(var(--neon-blue), 0.3)"
-              ]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            Takes
-          </motion.span>{" "}
-          <motion.span
-            animate={{ 
-              scale: [1, 1.1, 1],
-              rotate: [0, 5, 0]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="inline-block ml-1"
-          >
-            🔥
-          </motion.span>
+          >🔥</motion.span>
         </motion.h2>
-      </div>
+      </motion.div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {hotTakes.slice(0, -1).map((hotTake, index) => (
@@ -167,7 +125,6 @@ export default function HotTakes() {
         ))}
       </div>
       
-      {/* Centered last card */}
       <div className="mt-6 max-w-3xl mx-auto">
         <HotTakeCard hotTake={hotTakes[hotTakes.length - 1]} index={hotTakes.length - 1} />
       </div>

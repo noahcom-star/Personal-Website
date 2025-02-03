@@ -223,3 +223,33 @@ body {
 .glowing-header-purple {
   animation: glow-pulse-purple 3s ease-in-out infinite;
 }
+
+/* Enhanced text shadow for hover effects */
+.group-hover\:text-shadow-glow {
+  text-shadow: 0 0 15px rgba(var(--neon-purple), 0.8),
+               0 0 25px rgba(var(--neon-purple), 0.6);
+}
+
+/* Fire animation for emoji */
+@keyframes fire-pulse {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 100, 50, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 100, 50, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 10px rgba(255, 100, 50, 0.5));
+  }
+}
+
+.fire-emoji {
+  animation: fire-pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced card hover effects */
+.card-hover:hover {
+  box-shadow: 0 0 30px rgba(var(--neon-purple), 0.2),
+              inset 0 0 20px rgba(var(--neon-purple), 0.1);
+  transform: translateY(-4px) scale(1.01);
+}
