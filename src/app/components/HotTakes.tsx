@@ -69,10 +69,6 @@ const hotTakes: HotTake[] = [
   {
     title: "On Uncertainty",
     description: "If you want to become a successful entrepreneur, you need to become comfortable with handling uncertainty, and making decisions without knowing what's behind the door."
-  },
-  {
-    title: "Decision Making",
-    description: "The best entrepreneurs aren't the ones who know everything, because that means they waited too long—they're the ones comfortable with making critical decisions without knowing what's behind the door."
   }
 ];
 
