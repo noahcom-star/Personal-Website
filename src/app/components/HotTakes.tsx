@@ -92,21 +92,18 @@ export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
       <motion.div 
-        className="text-center mb-12 relative z-10"
+        className="text-center mb-12 relative"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        {/* Subtle glow background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.08),transparent_50%)] blur-md" />
-        
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold relative z-20"
+          className="text-4xl md:text-5xl font-bold relative inline-block"
           animate={{ 
             textShadow: [
-              "0 0 10px rgba(var(--neon-purple), 0.3)",
-              "0 0 20px rgba(var(--neon-purple), 0.5)",
-              "0 0 10px rgba(var(--neon-purple), 0.3)"
+              "0 0 8px rgba(var(--neon-purple), 0.2)",
+              "0 0 12px rgba(var(--neon-purple), 0.3)",
+              "0 0 8px rgba(var(--neon-purple), 0.2)"
             ]
           }}
           transition={{
@@ -115,12 +112,12 @@ export default function HotTakes() {
             ease: "easeInOut"
           }}
         >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[rgb(var(--neon-blue))] to-[rgb(var(--neon-purple))]">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[rgb(var(--neon-blue))] via-[rgb(var(--neon-purple))] to-[rgb(var(--neon-blue))]">
             Hot Takes{" "}
             <motion.span
               animate={{ 
                 scale: [1, 1.1, 1],
-                rotate: [0, 10, -10, 0]
+                rotate: [0, 5, -5, 0]
               }}
               transition={{
                 duration: 1.5,
