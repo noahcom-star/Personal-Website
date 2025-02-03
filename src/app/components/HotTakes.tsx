@@ -91,16 +91,59 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 relative">
+        <motion.div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.2),transparent_70%)] blur-xl"
+          animate={{
+            opacity: [0.5, 0.8, 0.5]
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
         <motion.h2 
-          className="text-4xl md:text-6xl font-bold mb-2 relative"
+          className="text-4xl md:text-6xl font-bold relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="bg-gradient-to-r from-[rgb(var(--neon-blue))] to-[rgb(var(--neon-purple))] text-transparent bg-clip-text inline-block">
-            Hot Takes
-          </span>
+          <motion.span
+            className="text-[rgb(var(--neon-purple))]"
+            animate={{
+              textShadow: [
+                "0 0 10px rgba(var(--neon-purple), 0.5), 0 0 20px rgba(var(--neon-purple), 0.3)",
+                "0 0 15px rgba(var(--neon-purple), 0.7), 0 0 30px rgba(var(--neon-purple), 0.5)",
+                "0 0 10px rgba(var(--neon-purple), 0.5), 0 0 20px rgba(var(--neon-purple), 0.3)"
+              ]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            Hot
+          </motion.span>{" "}
+          <motion.span
+            className="text-[rgb(var(--neon-blue))]"
+            animate={{
+              textShadow: [
+                "0 0 10px rgba(var(--neon-blue), 0.5), 0 0 20px rgba(var(--neon-blue), 0.3)",
+                "0 0 15px rgba(var(--neon-blue), 0.7), 0 0 30px rgba(var(--neon-blue), 0.5)",
+                "0 0 10px rgba(var(--neon-blue), 0.5), 0 0 20px rgba(var(--neon-blue), 0.3)"
+              ]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            Takes
+          </motion.span>{" "}
           <motion.span
             animate={{ 
               scale: [1, 1.1, 1],
@@ -111,7 +154,7 @@ export default function HotTakes() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="inline-block ml-2"
+            className="inline-block ml-1"
           >
             🔥
           </motion.span>
