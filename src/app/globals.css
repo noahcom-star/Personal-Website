@@ -14,26 +14,28 @@
 
 /* Custom Cursor */
 * {
-  cursor: none;
+  cursor: none !important;
 }
 
 .custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgb(var(--neon-blue));
+  width: 12px;
+  height: 12px;
+  background: rgba(var(--neon-purple), 0.3);
+  border: 1px solid rgb(var(--neon-purple));
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: all 0.1s ease;
+  transition: width 0.1s, height 0.1s, background-color 0.1s;
+  will-change: transform;
 }
 
 .custom-cursor.hover {
-  width: 40px;
-  height: 40px;
-  border-color: rgb(var(--neon-blue));
-  background-color: rgba(var(--neon-blue), 0.1);
+  width: 24px;
+  height: 24px;
+  background: rgba(var(--neon-purple), 0.1);
+  border: 1px solid rgb(var(--neon-purple));
 }
 
 /* Smooth Scroll */

@@ -7,13 +7,21 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
     const onMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      requestAnimationFrame(() => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      });
     };
 
     const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      setIsHovering(!!target.closest('[data-hover="true"]'));
+      const isHoverable = !!target.closest('[data-hover="true"]');
+      cursor.classList.toggle('hover', isHoverable);
     };
 
     document.addEventListener('mousemove', onMouseMove);
@@ -22,16 +30,10 @@ export default function CustomCursor() {
     return () => {
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseover', onMouseOver);
+      document.body.removeChild(cursor);
     };
   }, []);
 
-  return (
-    <div
-      className={`custom-cursor ${isHovering ? 'hover' : ''}`}
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-      }}
-    />
-  );
+  // Return null since we're managing the cursor directly in the DOM
+  return null;
 } 
