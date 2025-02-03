@@ -97,14 +97,16 @@ export default function HotTakes() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.15),transparent_70%)] blur-xl" />
+        {/* Subtle glow background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.08),transparent_50%)] blur-md" />
+        
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold gradient-text relative"
+          className="text-4xl md:text-5xl font-bold relative"
           animate={{ 
             textShadow: [
+              "0 0 10px rgba(var(--neon-purple), 0.3)",
               "0 0 20px rgba(var(--neon-purple), 0.5)",
-              "0 0 40px rgba(var(--neon-purple), 0.8)",
-              "0 0 20px rgba(var(--neon-purple), 0.5)"
+              "0 0 10px rgba(var(--neon-purple), 0.3)"
             ]
           }}
           transition={{
@@ -113,21 +115,23 @@ export default function HotTakes() {
             ease: "easeInOut"
           }}
         >
-          Hot Takes{" "}
-          <motion.span
-            animate={{ 
-              scale: [1, 1.2, 1],
-              rotate: [0, 15, -15, 0]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="inline-block"
-          >
-            🔥
-          </motion.span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[rgb(var(--neon-blue))] to-[rgb(var(--neon-purple))]">
+            Hot Takes{" "}
+            <motion.span
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 10, -10, 0]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="inline-block"
+            >
+              🔥
+            </motion.span>
+          </span>
         </motion.h2>
       </motion.div>
       
