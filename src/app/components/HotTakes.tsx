@@ -91,46 +91,26 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
-      <motion.div 
-        className="text-center mb-12 relative"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
-        <motion.h2 
-          className="text-4xl md:text-5xl font-bold relative inline-block"
-          animate={{ 
-            textShadow: [
-              "0 0 8px rgba(var(--neon-purple), 0.2)",
-              "0 0 12px rgba(var(--neon-purple), 0.3)",
-              "0 0 8px rgba(var(--neon-purple), 0.2)"
-            ]
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[rgb(var(--neon-blue))] via-[rgb(var(--neon-purple))] to-[rgb(var(--neon-blue))]">
-            Hot Takes{" "}
-            <motion.span
-              animate={{ 
-                scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="inline-block transform-gpu"
-            >
-              🔥
-            </motion.span>
-          </span>
-        </motion.h2>
-      </motion.div>
+      <div className="text-center mb-12">
+        <h2 className="text-4xl md:text-6xl font-bold mb-2">
+          <span className="text-[rgb(var(--neon-purple))]">Hot</span>{" "}
+          <span className="text-[rgb(var(--neon-blue))]">Takes</span>{" "}
+          <motion.span
+            animate={{ 
+              scale: [1, 1.2, 1],
+              y: [0, -5, 0]
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="inline-block"
+          >
+            🔥
+          </motion.span>
+        </h2>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {hotTakes.slice(0, -1).map((hotTake, index) => (
