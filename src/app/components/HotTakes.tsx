@@ -92,28 +92,30 @@ export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-6xl font-bold mb-2">
-          <span className="text-[rgb(var(--neon-purple))]">Hot</span>{" "}
-          <span className="text-[rgb(var(--neon-blue))]">Takes</span>{" "}
+        <motion.h2 
+          className="text-4xl md:text-6xl font-bold mb-2 relative"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <span className="bg-gradient-to-r from-[rgb(var(--neon-blue))] to-[rgb(var(--neon-purple))] text-transparent bg-clip-text inline-block">
+            Hot Takes
+          </span>
           <motion.span
             animate={{ 
-              scale: [1, 1.1, 1]
+              scale: [1, 1.1, 1],
+              rotate: [0, 5, 0]
             }}
             transition={{
-              duration: 1.5,
+              duration: 2,
               repeat: Infinity,
-              ease: "easeInOut",
-              repeatDelay: 0.5
+              ease: "easeInOut"
             }}
-            className="inline-block will-change-transform"
-            style={{ 
-              backfaceVisibility: "hidden",
-              WebkitFontSmoothing: "antialiased"
-            }}
+            className="inline-block ml-2"
           >
             🔥
           </motion.span>
-        </h2>
+        </motion.h2>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
