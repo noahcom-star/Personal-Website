@@ -92,9 +92,9 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
-      <div className="text-center mb-16">
+      <div className="text-center mb-20">
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold gradient-text relative mb-4"
+          className="text-4xl md:text-5xl font-bold gradient-text relative mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -115,15 +115,17 @@ export default function HotTakes() {
           >🔥</motion.span>
         </motion.h2>
         
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="text-[rgb(var(--text-secondary))] text-lg max-w-2xl mx-auto italic"
+          transition={{ delay: 0.3 }}
+          className="bg-[rgba(var(--darker-bg),0.7)] border border-[rgba(var(--neon-purple),0.2)] rounded-lg p-4 max-w-2xl mx-auto"
         >
-          These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they'll probably change every month! 😅
-        </motion.p>
+          <p className="text-[rgb(var(--text-secondary))] text-lg italic">
+            These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they'll probably change every month! 😅
+          </p>
+        </motion.div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
