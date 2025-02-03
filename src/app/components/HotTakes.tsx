@@ -113,39 +113,39 @@ export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
       <div className="text-center mb-20">
-        <div className="mb-4">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold gradient-text relative"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Hot Takes <motion.span
-              animate={{
-                textShadow: [
-                  "0 0 4px rgba(var(--neon-purple), 0.6)",
-                  "0 0 8px rgba(var(--neon-purple), 0.8)",
-                  "0 0 4px rgba(var(--neon-purple), 0.6)"
-                ]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >🔥</motion.span>
-          </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-[rgb(var(--text-secondary))] text-lg italic mt-4"
-          >
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold gradient-text relative mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Hot Takes <motion.span
+            animate={{
+              textShadow: [
+                "0 0 4px rgba(var(--neon-purple), 0.6)",
+                "0 0 8px rgba(var(--neon-purple), 0.8)",
+                "0 0 4px rgba(var(--neon-purple), 0.6)"
+              ]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >🔥</motion.span>
+        </motion.h2>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="max-w-2xl mx-auto bg-[rgba(var(--darker-bg),0.7)] border border-[rgba(var(--neon-purple),0.2)] rounded-lg p-4"
+        >
+          <p className="text-[rgb(var(--text-primary))] text-lg italic">
             These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they'll probably change every month! 😅
-          </motion.p>
-        </div>
+          </p>
+        </motion.div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
