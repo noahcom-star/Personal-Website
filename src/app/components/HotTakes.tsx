@@ -15,26 +15,6 @@ const hotTakes: HotTake[] = [
     description: "Too many founders get stuck in analysis paralysis. The best way to learn is by shipping something real to users, even if it's not perfect."
   },
   {
-    title: "AI Will Augment, Not Replace Entrepreneurs",
-    description: "AI tools are incredible force multipliers, but the core skills of understanding users and solving real problems will remain uniquely human."
-  },
-  {
-    title: "Community > Marketing",
-    description: "Building a genuine community around your product is more valuable than any marketing campaign. Word of mouth from passionate users is unbeatable."
-  },
-  {
-    title: "Remote Work is the Future",
-    description: "The ability to hire talent globally and build asynchronous workflows is a massive competitive advantage for modern startups."
-  },
-  {
-    title: "Focus on Revenue, Not Fundraising",
-    description: "While VC funding can accelerate growth, focusing on sustainable revenue from day one builds stronger businesses and keeps you independent."
-  },
-  {
-    title: "On Building Companies",
-    description: "Too many people want to be founders, not enough want to build great companies."
-  },
-  {
     title: "On AI & Jobs",
     description: "AI won't take your job—someone using AI better than you will."
   },
