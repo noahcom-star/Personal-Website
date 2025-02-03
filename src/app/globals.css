@@ -18,8 +18,8 @@
 }
 
 .custom-cursor {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   background: rgb(var(--neon-purple));
   border-radius: 50%;
   position: fixed;
@@ -32,8 +32,8 @@
 }
 
 .custom-cursor.hover {
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   background: rgba(var(--neon-purple), 0.5);
 }
 
