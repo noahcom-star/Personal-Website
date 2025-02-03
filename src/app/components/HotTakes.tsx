@@ -118,11 +118,11 @@ export default function HotTakes() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="bg-[rgba(var(--darker-bg),0.7)] border border-[rgba(var(--neon-purple),0.2)] rounded-lg p-4 max-w-2xl mx-auto"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="bg-[rgba(var(--darker-bg),0.7)] border border-[rgba(var(--neon-purple),0.3)] rounded-lg p-6 max-w-2xl mx-auto shadow-lg"
         >
-          <p className="text-[rgb(var(--text-secondary))] text-lg italic">
+          <p className="text-[rgb(var(--text-primary))] text-lg italic">
             These are my current takes on entrepreneurship as of January 2025. With limited real-world experience, take them with a grain of salt—they'll probably change every month! 😅
           </p>
         </motion.div>
