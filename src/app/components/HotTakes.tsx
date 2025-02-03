@@ -97,15 +97,19 @@ export default function HotTakes() {
           <span className="text-[rgb(var(--neon-blue))]">Takes</span>{" "}
           <motion.span
             animate={{ 
-              scale: [1, 1.2, 1],
-              y: [0, -5, 0]
+              scale: [1, 1.1, 1]
             }}
             transition={{
-              duration: 1,
+              duration: 1.5,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
+              repeatDelay: 0.5
             }}
-            className="inline-block"
+            className="inline-block will-change-transform"
+            style={{ 
+              backfaceVisibility: "hidden",
+              WebkitFontSmoothing: "antialiased"
+            }}
           >
             🔥
           </motion.span>
