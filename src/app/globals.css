@@ -231,20 +231,20 @@ body {
 }
 
 /* Fire animation for emoji */
-@keyframes fire-pulse {
+@keyframes fire-pulse-purple {
   0% {
-    filter: drop-shadow(0 0 10px rgba(255, 100, 50, 0.5));
+    filter: drop-shadow(0 0 10px rgba(var(--neon-purple), 0.5));
   }
   50% {
-    filter: drop-shadow(0 0 20px rgba(255, 100, 50, 0.8));
+    filter: drop-shadow(0 0 20px rgba(var(--neon-purple), 0.8));
   }
   100% {
-    filter: drop-shadow(0 0 10px rgba(255, 100, 50, 0.5));
+    filter: drop-shadow(0 0 10px rgba(var(--neon-purple), 0.5));
   }
 }
 
-.fire-emoji {
-  animation: fire-pulse 2s ease-in-out infinite;
+.fire-emoji-purple {
+  animation: fire-pulse-purple 2s ease-in-out infinite;
 }
 
 /* Enhanced card hover effects */

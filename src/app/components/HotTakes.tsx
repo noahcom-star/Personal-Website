@@ -105,9 +105,9 @@ export default function HotTakes() {
           Hot Takes <motion.span
             animate={{
               textShadow: [
-                "0 0 20px rgba(255,100,50,0.5)",
-                "0 0 30px rgba(255,100,50,0.8)",
-                "0 0 20px rgba(255,100,50,0.5)"
+                "0 0 20px rgba(var(--neon-purple), 0.5)",
+                "0 0 30px rgba(var(--neon-purple), 0.8)",
+                "0 0 20px rgba(var(--neon-purple), 0.5)"
               ]
             }}
             transition={{
@@ -115,6 +115,7 @@ export default function HotTakes() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
+            className="fire-emoji-purple"
           >🔥</motion.span>
         </motion.h2>
       </motion.div>
