@@ -9,12 +9,18 @@ export default function CustomCursor() {
     document.body.appendChild(cursor);
 
     const onMouseMove = (e: MouseEvent) => {
-      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
     };
 
     const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      cursor.classList.toggle('hover', !!target.closest('[data-hover="true"]'));
+      const isHoverable = !!target.closest('[data-hover="true"]');
+      cursor.classList.toggle('hover', isHoverable);
+      if (isHoverable) {
+        cursor.style.transform = `translate(${e.clientX - 16}px, ${e.clientY - 16}px)`;
+      } else {
+        cursor.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
+      }
     };
 
     document.addEventListener('mousemove', onMouseMove, { passive: true });
