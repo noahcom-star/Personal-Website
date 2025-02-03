@@ -92,27 +92,39 @@ function HotTakeCard({ hotTake, index }: { hotTake: HotTake; index: number }) {
 export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
-      <motion.h2 
-        className="text-4xl md:text-5xl font-bold text-center gradient-text relative mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
-        Hot Takes <motion.span
-          animate={{
-            textShadow: [
-              "0 0 4px rgba(var(--neon-purple), 0.6)",
-              "0 0 8px rgba(var(--neon-purple), 0.8)",
-              "0 0 4px rgba(var(--neon-purple), 0.6)"
-            ]
-          }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >🔥</motion.span>
-      </motion.h2>
+      <div className="text-center mb-16">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold gradient-text relative mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Hot Takes <motion.span
+            animate={{
+              textShadow: [
+                "0 0 4px rgba(var(--neon-purple), 0.6)",
+                "0 0 8px rgba(var(--neon-purple), 0.8)",
+                "0 0 4px rgba(var(--neon-purple), 0.6)"
+              ]
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >🔥</motion.span>
+        </motion.h2>
+        
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="text-[rgb(var(--text-secondary))] text-lg max-w-2xl mx-auto"
+        >
+          Just my current takes on entrepreneurship as of 2025. With my limited experience, take these with a grain of salt—they'll probably evolve as I learn more!
+        </motion.p>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {hotTakes.slice(0, -1).map((hotTake, index) => (
