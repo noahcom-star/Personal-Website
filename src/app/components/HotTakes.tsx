@@ -92,7 +92,7 @@ export default function HotTakes() {
   return (
     <Section id="hot-takes" className="py-20">
       <motion.div 
-        className="text-center mb-12 relative"
+        className="text-center mb-12 relative z-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -101,7 +101,7 @@ export default function HotTakes() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--neon-purple),0.08),transparent_50%)] blur-md" />
         
         <motion.h2 
-          className="text-4xl md:text-5xl font-bold relative"
+          className="text-4xl md:text-5xl font-bold relative z-20"
           animate={{ 
             textShadow: [
               "0 0 10px rgba(var(--neon-purple), 0.3)",
@@ -127,7 +127,7 @@ export default function HotTakes() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              className="inline-block"
+              className="inline-block transform-gpu"
             >
               🔥
             </motion.span>
