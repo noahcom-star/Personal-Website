@@ -1,3 +1,4 @@
+// Updated Experience Component - January 2025
 'use client';
 
 import { motion } from 'framer-motion';
@@ -18,7 +19,7 @@ interface ExperienceItem {
 
 const currentExperiences: ExperienceItem[] = [
   {
-    title: "SEO Intern",
+    title: "Intern",
     organization: "Armilla AI (YC-backed)",
     description: "Working with the world's first AI insurance startup, Armilla AI, a Y Combinator-backed company that has raised over $5 million. Focusing on SEO optimization and content strategy.",
     date: "December 2024 - Present",
@@ -26,9 +27,9 @@ const currentExperiences: ExperienceItem[] = [
     tags: ["SEO", "AI", "Insurance Tech", "YC"]
   },
   {
-    title: "Marketing & Dev Intern",
+    title: "Intern",
     organization: "Built for Impact",
-    description: "Outreached to over 10,000+ students in under two weeks for pilot launch. Currently working with the team to scale the platform.",
+    description: "Outreached to over 10,000+ students in under two weeks for pilot launch. Currently working with the product team to scale the platform.",
     date: "November 2024 - Present",
     link: "https://builtforimpact.ca/",
     tags: ["Marketing", "Development", "Education"]
